@@ -15,6 +15,7 @@ import {
   MDBDropdownItem,
   MDBCollapse,
 } from 'mdb-react-ui-kit';
+import { Link } from 'react-router-dom';
 
 export default function App() {
   const [openBasic, setOpenBasic] = useState(false);
@@ -36,14 +37,20 @@ export default function App() {
         <MDBCollapse navbar open={openBasic}>
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href='#'>
+              {/* <MDBNavbarLink active aria-current='page' href='#'>
                 Home
-              </MDBNavbarLink>
+              </MDBNavbarLink> */}
+              <Link className='nav-link' to="/">Home</Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>Link</MDBNavbarLink>
+              <Link className='nav-link' to="/about">About</Link>              
             </MDBNavbarItem>
-
+            <MDBNavbarItem>
+              <Link className='nav-link' to="/contact">Contact</Link>              
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <Link className='nav-link' to="/examples">Examples</Link>              
+            </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle tag='a' className='nav-link' role='button'>
@@ -57,11 +64,6 @@ export default function App() {
               </MDBDropdown>
             </MDBNavbarItem>
 
-            <MDBNavbarItem>
-              <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
-                Disabled
-              </MDBNavbarLink>
-            </MDBNavbarItem>
           </MDBNavbarNav>
 
           <form className='d-flex input-group w-auto'>
