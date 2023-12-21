@@ -4,6 +4,8 @@ import HomeCompo from '../Pages/HomeCompo';
 import Aboutus from '../Pages/Aboutus';
 import ContactComp from '../Pages/ContactComp';
 import ExampleComp from '../Pages/ExampleComp';
+import FunctionalComp from '../Component/FunctionalComponent/FunctionalCompRoute';
+import ClassComp from '../Component/ClassComponent/Class';
 const router=createBrowserRouter([
     {
         path:"/",
@@ -21,6 +23,17 @@ const router=createBrowserRouter([
     {
         path:"/example",
         element:(<><Header/><ExampleComp/></>),
+        children:[
+            {
+                path:"/example/classcomponent/*",
+                element:<ClassComp/>,
+            },
+            {
+                path:"/example/functionalcomponent/*",
+                element:<FunctionalComp/>,
+            },
+            
+        ]
 
     },
 ])
