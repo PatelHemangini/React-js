@@ -2,7 +2,7 @@
 import { useRoutes } from "react-router-dom";
 import FunctionalCompMenu from "./FunctionalCompMenu";
 import FunctionalcompinReact from "./01FunctionalCompInReact";
-import StateFunctionalCompInreact from "./02StateFunctionalCompInReact";
+import StateFunctionalCompInReact from "./02StateFunctionalCompInReact";
 
 
 const FunctionalCompRoute = () => {
@@ -13,13 +13,13 @@ const FunctionalCompRoute = () => {
             children:[
                 {
                     path:"whatisfunctionalcomponent",
-                    element:<FunctionalcompinReact/>
+                    element:<FunctionalcompinReact/>,
 
                 },
                 {
                     path:"stateinfunccomp",
-                    element:<StateFunctionalCompInreact/>
-                }
+                    element:< StateFunctionalCompInReact/>,
+                },
             ]
         },
 

@@ -7,8 +7,8 @@ const FunctionalCompMenu=()=>{
             <div className="col-6 offset-6">
             <ol>
                 <li><Link to="whatisfunctionalcomponent"> What is Functional Component </Link></li>
-                {/* <li><Link to="stateinfunccomp"> State </Link></li> */}
-                {/* <li><Link to="propsinfunccomp"> Props </Link></li> */}
+                <li><Link to="stateinfunccomp"> State </Link></li>
+                <li><Link to="propsinfunccomp"> Props </Link></li>
             </ol>
             </div>
         </div>
