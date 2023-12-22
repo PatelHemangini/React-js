@@ -16,8 +16,12 @@ const CustomCard = (props) => {
                 <MDBCardBody>
                     <MDBCardTitle>{props.title}</MDBCardTitle>
                     <MDBCardText>
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                        {props.description}
                     </MDBCardText>
+                    <MDBCardText>
+                       price= {props.price}$
+                    </MDBCardText>
+                      <p>Rating={props.rating}</p>
                     <MDBBtn href='#'>Button</MDBBtn>
                 </MDBCardBody>
             </MDBCard>
