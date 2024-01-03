@@ -5,7 +5,7 @@ import Aboutus from '../Pages/Aboutus';
 import ContactComp from '../Pages/ContactComp';
 import ExampleComp from '../Pages/ExampleComp';
 import FunctionalComp from '../Component/FunctionalComponent/FunctionalCompRoute';
-import ClassComp from '../Component/ClassComponent/Class';
+import ClassComp from '../Component/ClassComponent/ClassCompoRoute';
 const router=createBrowserRouter([
     {
         path:"/",
