@@ -19,6 +19,7 @@ const FunctionalCompMenu=()=>{
                 <li><Link to="usereffectinfunctionalcompo"> useRef </Link></li>
                 <li><Link to="usecallbackinfunctionalcompo"> useCallback </Link></li>
                 <li><Link to="usememoinfunctionalcompo"> useMemo </Link></li>
+                <li><Link to="useimperativehandlecomponent"> useimperative </Link></li>
                
             </ol>
             </div>

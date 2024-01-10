@@ -14,6 +14,7 @@ import UseLayoutEffectHooksInFunctionalCompo from './11UseLayoutEffectHooksInFun
 import UseRefEffectHooksInFunctionalCompo from './12UseRefEffectHooksInFunctionalCompo.jsx';
 import UseCallbackHooksInFunctionalCompo from './13UseCallbackHooksInFunctionalCompo.jsx';
 import UseMemoHooksInFunctionalCompo from './14UseMemoHooksInFunctionalCompo.jsx';
+import UseImpetitiveHandleComponent from "./15UseImperitiveHandleComponent.jsx";
 
 
 const FunctionalCompRoute = () => {
@@ -64,6 +65,9 @@ const FunctionalCompRoute = () => {
                 }, {
                     path: "usememoinfunctionalcompo",
                     element: <UseMemoHooksInFunctionalCompo />,
+                },{
+                    path: "useimperativehandlecomponent",
+                    element: <UseImpetitiveHandleComponent />,
                 },
             ]
         },
