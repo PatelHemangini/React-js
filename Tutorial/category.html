@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -1px;
+  text-align: center;
+  padding-top: 60px;
+  background: #000;
+  font-size: 20px;
+  height: 100vh;
+  color: #fff;
+  margin: 0;
+}
+
+.buttons {
+  padding: 20px 0 40px;
+}
+
+.button {
+  transition: all .2s ease-in-out;
+  -webkit-appearance: none;
+  border-radius: 100px;
+  font-family: inherit;
+  appearance: none;
+  background: none;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 20px;
+  outline: none;
+  opacity: 0.4;
+  border: none;
+  color: #fff;
+}
+
+.button:hover,
+.button.active {
+  opacity: 1;
+}
+
+.grid {
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto 80px;
+  max-width: 90%;
+  grid-gap: 20px;
+  display: grid;
+  width: 600px;
+}
+
+.item {
+  border-radius: 4px;
+  height: 100px;
+  width: 100%;
+}
+
+.item.blue { background: #06f; }
+.item.white { background: #fff; }
+.item.grey { background: #8e9aa7; }
+.item.yellow { background: #fdc67e; }
+.item.red { background: #eb7676; }
+
+.hide { display: none; }
+    </style>
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1>Simple category filter</h1>
+
+<div class="buttons">
+  <button class="button all active">All</button>
+  <button class="button white">White</button>
+  <button class="button grey">Grey</button>
+  <button class="button blue">Blue</button>
+  <button class="button yellow">Yellow</button>
+  <button class="button red">Red</button>
+</div>
+
+<div class="grid">
+  <div class="item blue"></div>
+  <div class="item white"></div>
+  <div class="item grey"></div>
+  <div class="item grey"></div>
+  <div class="item yellow"></div>
+  <div class="item white"></div>
+  <div class="item white"></div>
+  <div class="item grey"></div>
+  <div class="item red"></div>
+  <div class="item blue"></div>
+  <div class="item white"></div>
+  <div class="item grey"></div>
+  <div class="item grey"></div>
+  <div class="item yellow"></div>
+  <div class="item white"></div>
+  <div class="item white"></div>
+  <div class="item grey"></div>
+  <div class="item red"></div>
+</div>*
+
+<script>
+    // Check active classes
+var checkClass = function() {
+  if ( $('.item').hasClass('hide') ) {
+    $('.item').removeClass('hide');
+  }
+};
+
+// Category filters
+$('.all').click( function() {
+  checkClass();
+});
+$('.blue').click( function() {
+  checkClass();
+  $('.item:not(.blue)').toggleClass('hide');
+});
+$('.white').click( function() {
+  checkClass();
+  $('.item:not(.white)').toggleClass('hide');
+});
+$('.grey').click( function() {
+  checkClass();
+  $('.item:not(.grey)').toggleClass('hide');
+});
+$('.yellow').click( function() {
+  checkClass();
+  $('.item:not(.yellow)').toggleClass('hide');
+});
+$('.red').click( function() {
+  checkClass();
+  $('.item:not(.red)').toggleClass('hide');
+});
+
+
+// Active tag
+$('.button').click(function(){
+  $('.button').removeClass('active');
+  $(this).addClass('active');
+})
+</script>
+</body>
+</html>

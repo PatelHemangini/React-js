@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Jost&family=Marcellus&family=Montserrat&family=Work+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Arimo&family=Jost&family=Marcellus&family=Montserrat&family=Work+Sans&display=swap');
 
 * {
     margin: 0;
@@ -13,9 +13,7 @@
     box-sizing: border-box;
 
 }
-nav ul{
-  display: flex;
-}
+
 .filter-btn{
     display: block;
     outline: none;
@@ -26,7 +24,7 @@ nav ul{
     font-weight: 600;
     font-size: 1.3rem;
     text-transform: capitalize;
-    cursor: pointer;
+cursor: pointer;
 }
 
 .filter-btn.active{
@@ -78,12 +76,4 @@ ol li p{
 
 .hide{
     display: none;
-}
-.iframe{
-  height:600px;
-  width: 600px;
-}
-.table{
-  width: 100%;
-  border: 1;
 }

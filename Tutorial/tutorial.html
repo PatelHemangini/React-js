@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar row jcs">
+                <div class="tut_text">
+                    <h2>TUTORIAL</h2>
+                </div>
+                <div class="click_nav">
+                    <ul>
+
+                        <button class="html filter-btn">html</button>
+                        <button class="css filter-btn">css</button>
+                        <button class="js filter-btn">JAVASCRIPT</button>
+                        <button class="bootstrap filter-btn">BOOTSTRAP</button>
+                        <button class="react filter-btn">react</button>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="html hide item">
+        <h1>html task</h1>
+    </section>
+
+    <section class="css hide item">
+        <h1>css</h1>
+    </section>
+
+    <section class="js hide item">
+        <h1>js</h1>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // Check active classes
+        var checkClass = function () {
+            if ($('.item').hasClass('hide')) {
+                $('.item').removeClass('hide');
+            }
+        };
+        $(".html").addClass("active");
+        $(".item.html").removeClass("hide")
+        // Category filters
+        $('.item').click(function () {
+            checkClass();
+        });
+        $('.html').click(function () {
+            checkClass();
+            $('.item:not(.html)').toggleClass('hide');
+        });
+        $('.css').click(function () {
+            checkClass();
+            $('.item:not(.css)').toggleClass('hide');
+        });
+        $('.js').click(function () {
+            checkClass();
+            $('.item:not(.js)').toggleClass('hide');
+        });
+        $('.bootstrap').click(function () {
+            checkClass();
+            $('.item:not(.bootstrap)').toggleClass('hide');
+        });
+        $('.react').click(function () {
+            checkClass();
+            $('.item:not(.react)').toggleClass('hide');
+        });
+
+
+        // Active tag
+        $('.filter-btn').click(function () {
+            $('.filter-btn').removeClass('active');
+            $(this).addClass('active');
+        })
+    </script>
+</body>
+
+</html>
