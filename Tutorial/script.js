@@ -1,41 +1,17 @@
+$(document).ready(function () {
+    $('.filter-btn').click(function () {
+        var category = $(this).data('category');
+        $('.item').removeClass('hide');
+        $('.item:not(.' + category + ')').toggleClass('hide');
+        $('.filter-btn').removeClass('active');
+        $(this).addClass('active');
+    });
 
-        // Check active classes
-        var checkClass = function () {
-            if ($('.item').hasClass('hide')) {
-                $('.item').removeClass('hide');
-            }
-        };
-        $(".html").addClass("active");
-        $(".item.html").removeClass("hide")
-        // Category filters
-        $('.item').click(function () {
-            checkClass();
-        });
-        $('.html').click(function () {
-            checkClass();
-            $('.item:not(.html)').toggleClass('hide');
-        });
-        $('.css').click(function () {
-            checkClass();
-            $('.item:not(.css)').toggleClass('hide');
-        });
-        $('.js').click(function () {
-            checkClass();
-            $('.item:not(.js)').toggleClass('hide');
-        });
-        $('.bootstrap').click(function () {
-            checkClass();
-            $('.item:not(.bootstrap)').toggleClass('hide');
-        });
-        $('.react').click(function () {
-            checkClass();
-            $('.item:not(.react)').toggleClass('hide');
-        });
-
-
-        // Active tag
-        $('.filter-btn').click(function () {
-            $('.filter-btn').removeClass('active');
-            $(this).addClass('active');
-        })
-    
+    // Toggle visibility of html intro content
+    $('.htmlintro').click(function () {
+        $('.item').removeClass('hide');
+        $('.item:not(.htmlintro)').toggleClass('hide');
+        $('.filter-btn').removeClass('active');
+        $('.htmlintro.filter-btn').addClass('active');
+    });
+});

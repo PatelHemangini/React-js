@@ -1,74 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutorial Website</title>
-  <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-  <nav>
-    <ul>
-
-      <button class="html filter-btn">html</button>
-      <button class="css filter-btn">css</button>
-      <button class="js filter-btn">JAVASCRIPT</button>
-      <button class="bootstrap filter-btn">BOOTSTRAP</button>
-      <button class="react filter-btn">react</button>
-  </ul>
-  </nav>
-</header>
-<section class="html hide item">
-  <table class="table" >
-    <tr>
-        <td width="20%" align="top">
+    <header>
+        <nav>
             <ul>
-                <li><a href="1.html" target="Frame" >First prog.</a></li>
-                <li><a href="02html_intro.html" target="Frame">html_intro.</a></li>
-                <li><a href="03structure.html" target="Frame">structure</a></li>
-                <li><a href="04TagsVsElement.html" target="Frame">TagsVsElement</a></li>
-                <li><a href="05voidElement.html" target="Frame">voidElement.</a></li>
-                <li><a href="07nestedorunformatingtags.html" target="Frame">nestedorunformatingtags</a></li>
-                <li><a href="09wrapperTags.html" target="Frame">wrapperTags</a></li>
-                <li><a href="13image_tags.html" target="Frame">image_tags</a></li>
-                <li><a href="14BlockLevelElement.html" target="Frame">BlockLevelElement</a></li>
-                <li><a href="15InlineElement.html" target="Frame">InlineElement</a></li>
-                <li><a href="16List.html" target="Frame">List</a></li>
-                <li><a href="base.html" target="Frame">base</a></li>
-                <li><a href="imagemaptag.html" target="Frame">imagemaptag</a></li>
-                <li><a href="img_ab_rel_path.html" target="Frame">img_ab_rel_path</a></li>
-                <li><a href="iframe.html" target="Frame">iframe</a></li>
-                <li><a href="AudiovideoTag/Audio_videotag.html" target="Frame">Audio_videotag</a></li>
-                <li><a href="Table/tabledemo1.html" target="Frame">Table Demo1</a></li>
-                <li><a href="Table/tabledemo2.html" target="Frame">Table Demo2</a></li>
-                <li><a href="Table/tabledemo3.html" target="Frame">Table Demo3</a></li>
-                <li><a href="Table/tabledemo4.html" target="Frame">Table Demo4</a></li>
-                <li><a href="Table/tabledemo5.html" target="Frame">Table Demo5</a></li>
-
-
-
+                <button class="html filter-btn" data-category="html">html</button>
+                <button class="css filter-btn" data-category="css">css</button>
+                <button class="js filter-btn" data-category="js">JAVASCRIPT</button>
+                <button class="bootstrap filter-btn" data-category="bootstrap">BOOTSTRAP</button>
+                <button class="react filter-btn" data-category="react">react</button>
             </ul>
-        </td>
-        <td>
-            <iframe class="iframe"name="Frame" src=""  frameborder=" "></iframe>
-        </td>
-    </tr>
-</table>
-</section>
+        </nav>
+    </header>
+    <section class="html hide item">
+        <table class="table">
+            <tr>
+                <td width="20%" align="top">
+                    <ul>
+                        <button class="htmlintro filter-btn" data-category="htmlintro">htmlintro</button>
+                        <button class="htmltags filter-btn" data-category="htmltags">html tags</button>
+                        
+                        <!-- Additional HTML content for each category -->
+                    </ul>
+                </td>
+                <td>
+                  <div class="htmlintro hide item">
+                    <h1>html intro</h1>
+                </div>
+                <div class="htmltags hide item">
+                    <h1>hello tgs</h1>
+                </div>l
+                    <!-- <iframe class="iframe" name="Frame" src="" frameborder="0"></iframe> -->
+                </td>
+            </tr>
+        </table>
+    </section>
 
-<section class="css hide item">
-  <h1>css</h1>
-</section>
+    <section class="css hide item">
+        <h1>css</h1>
+        <!-- Additional HTML content for the CSS section -->
+    </section>
 
-<section class="js hide item">
-  <h1>js</h1>
-</section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    <section class="js hide item">
+        <h1>js</h1>
+        <!-- Additional HTML content for the JavaScript section -->
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
