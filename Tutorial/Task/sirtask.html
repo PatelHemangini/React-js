@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+</head>
+<body>
+
+    <div id="taskList"></div>
+
+    <script>
+        var tasksData = {
+            "tasks": [
+                {
+                    "id": 1,
+                    "name": "Task 1",
+                    "subtasks": [
+                        {
+                            "id": 11,
+                            "name": "Subtask 1.1",
+                            "subtasks": []
+                        },
+                        {
+                            "id": 12,
+                            "name": "Subtask 1.2",
+                            "subtasks": [
+                                {
+                                    "id": 121,
+                                    "name": "Subtask 1.2.1",
+                                    "subtasks": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Task 2",
+                    "subtasks": []
+                },
+                {
+                    "id": 3,
+                    "name": "Task 3",
+                    "subtasks": [
+                        {
+                            "id": 31,
+                            "name": "Subtask 3.1",
+                            "subtasks": []
+                        }
+                    ]
+                }
+            ]
+        };
+
+        function render(contain, tasks) {
+            tasks.forEach(function (task) {
+                var taskElement = document.createElement("div");
+                taskElement.innerHTML = "<strong>" + task.name + "</strong>";
+                
+                if (task.subtasks.length > 0) {
+                    console.log(task.subtasks.length );
+                    var subtasksContainer = document.createElement("div");
+                    render(subtasksContainer, task.subtasks);
+                    taskElement.appendChild(subtasksContainer);
+                    subtasksContainer.style.marginLeft = "20px";
+                }
+
+                contain.appendChild(taskElement);
+            });
+        }
+
+        var taskListContainer = document.getElementById("taskList");
+        render(taskListContainer, tasksData.tasks);
+    </script>
+
+</body>
+</html>
