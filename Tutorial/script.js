@@ -8,10 +8,10 @@ $(document).ready(function () {
     });
 
     // Toggle visibility of html intro content
-    $('.htmlintro').click(function () {
+    $('.htmlintro.filter-btn').click(function () {
         $('.item').removeClass('hide');
         $('.item:not(.htmlintro)').toggleClass('hide');
         $('.filter-btn').removeClass('active');
-        $('.htmlintro.filter-btn').addClass('active');
+        $(this).addClass('active');
     });
 });
